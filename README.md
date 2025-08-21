@@ -1,1 +1,1 @@
-The code to recreate the main and supplementary figures can be found in ´novel_MR_demo.ipynb´.
+The code to recreate the main and supplementary figures can be found in `novel_MR_demo.ipynb`.
