@@ -22,6 +22,6 @@ The file organization is structured to separate raw data, methodological scripts
 
 ---
 
-## Prerequisites and Installation
+## Prerequisites
 
 To run the code in this repository, you will need Python 3.12, NumPy 2.1, and SciPy 1.14.
