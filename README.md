@@ -13,9 +13,9 @@ The file organization is structured to separate raw data, methodological scripts
 * **`ehpmarkrecap.py`**: The core Python module containing the primary functions and algorithms for the mark-recapture methodology.
 * **`OtherMethods.py`**: A module containing implementations of alternative methods used for comparative performance in the study.
 * **`Simulation.py`**: The script used to run the simulations.
-* **`figures_and_tables.ipynb`**: A Jupyter Notebook that ingests the simulation results and raw data to generate the exact figures and tables found in the manuscript.
+* **`figures_and_tables.ipynb`**: A Jupyter Notebook to generate the exact figures and tables found in the manuscript.
 * **`ci_efficiency_all_results_table_7.csv`**: Results used to produce Table 7 in the paper.
-* **`data/`**: A directory containing empirical datasets used for case studies, including:
+* **`data/`**: A directory containing empirical datasets used for case studies:
     * `Data_Khelifa_et_al._2021_Sci.Rep.xlsx`
     * `Hinneberg_et_al_2022_Multi_Surveyor_CMR_resultsfile.xlsx`
     * `Rhinoceros_Auklet_North_American_Pacific_Coast_(GLS)-tracks.csv`
