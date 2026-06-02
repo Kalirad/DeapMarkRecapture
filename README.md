@@ -1,27 +1,50 @@
 # The Exact Hypergeometric Posterior Method for Accurate Inference of Population Size from Mark–Recapture Data
 
-This repository contains the code, data, and analysis scripts necessary to reproduce the results, simulations, and figures presented in the paper _The Exact Hypergeometric Posterior Method for Accurate
-Inference of Population Size from Mark–Recapture Data_, by Danial Mirzaee, Seyed Amir Malekpour, and
-Ata Kalirad (DOI: pending publication).
+This repository contains the code, data, and analysis scripts necessary to reproduce
+the results, simulations, and figures presented in the paper _The Exact Hypergeometric
+Posterior Method for Accurate Inference of Population Size from Mark–Recapture Data_,
+by Danial Mirzaee, Seyed Amir Malekpour, and Ata Kalirad (DOI: pending publication).
 
 ---
 
-## Repository Structure
+## Installation
 
-The file organization is structured to separate raw data, methodological scripts, simulation runs, and final outputs:
+The `ehpmarkrecap` package can be installed directly from GitHub:
 
-* **`ehpmarkrecap.py`**: The core Python module containing the primary functions and algorithms for the mark-recapture methodology.
-* **`OtherMethods.py`**: A module containing implementations of alternative methods used for comparative performance in the study.
-* **`Simulation.py`**: The script used to run the simulations.
-* **`figures_and_tables.ipynb`**: A Jupyter Notebook to generate the exact figures and tables found in the manuscript.
-* **`ci_efficiency_all_results_table_7.csv`**: Results used to produce Table 7 in the paper.
-* **`data/`**: A directory containing empirical datasets used for case studies:
+```bash
+pip install git+https://github.com/YOUR_USERNAME/ehpmarkrecap.git
+```
+
+### Basic usage
+
+```python
+from ehpmarkrecap import ehp, ehp_plot
+
+# Single dataset, unbounded
+res = ehp((100, 100, 10), K=False, alpha=0.05)
+print(res["mode"], res["median"], res["ci_low"], res["ci_high"])
+
+# With bounded K and heterogeneity
+res = ehp((20, 20, 5), K=3000, phi=0.7, omega=1.5, alpha=0.05)
+ehp_plot(res)
+```
+
+---
+
+## Reproducing the Results
+
+### Prerequisites
+
+Python 3.12, NumPy 2.1, SciPy 1.14.
+
+### Repository Structure
+
+* **`ehpmarkrecap/`**: Installable Python package with the core EHP functions.
+* **`OtherMethods.py`**: Implementations of alternative methods used for comparison.
+* **`Simulation.py`**: Script used to run the simulations.
+* **`figures_and_tables.ipynb`**: Jupyter Notebook to generate all figures and tables.
+* **`ci_efficiency_all_results_table_7.csv`**: Results for Table 7.
+* **`data/`**: Empirical datasets used in case studies:
     * `Data_Khelifa_et_al._2021_Sci.Rep.xlsx`
     * `Hinneberg_et_al_2022_Multi_Surveyor_CMR_resultsfile.xlsx`
     * `Rhinoceros_Auklet_North_American_Pacific_Coast_(GLS)-tracks.csv`
-
----
-
-## Prerequisites
-
-To run the code in this repository, you will need Python 3.12, NumPy 2.1, and SciPy 1.14.

@@ -1,4 +1,5 @@
 '''
+ehpmarkrecap.core
 ehpmarkrecap v 0.1.0
 Mirzaee et al., Feb 2026
 '''
@@ -557,6 +558,7 @@ res = ehp(data_sets, K=2000, phi=0.8, omega=1.1, alpha=0.05, ci_method="hpd", mt
 # Visulaizing
 ehp_plot(res)
 '''
-m, C, r = 50000, 50000, 1000
-res = ehp((m, C, r), K=False, phi=False, omega=False, alpha=0.05)
-print(res["mode"], res["mean"], res["median"], res["ci_low"], res["ci_high"])
+if __name__ == "__main__":
+    m, C, r = 50000, 50000, 1000
+    res = ehp((m, C, r), K=False, phi=False, omega=False, alpha=0.05)
+    print(res["mode"], res["mean"], res["median"], res["ci_low"], res["ci_high"])
